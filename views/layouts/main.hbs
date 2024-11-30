@@ -1,0 +1,31 @@
+<div class="header">
+  <img src="/images/UVM logo.png" style="max-height: 55px; max-width: 55px; border: 2px solid #88c426;" class="w-25 rounded-circle float-start bg-white" alt="Logo UVM"> 
+  <h1 style="padding-left: 75px;">{{title}}</h1>
+</div>
+<div class="cuerpo">   
+  <div style="height:500px" class="container pt-5 text-center">
+    <h2>Bienvenido, crea o ingresa a una sala de videochat para continuar</h2><br>    
+    <div class="row">
+      <div class="col mb-5">
+        <h3>Crea una sala:</h3><br>
+        <button type="button" style="background-color: white; color: #1d555b; border: 2px solid #1d555b" class="boton btn btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">Crear</button>
+      </div>
+      <div class="col mb-5" style="border-left: 5px solid #860000;">
+        <div class="row">
+          <h3>Ingresa a una sala:</h3><br>
+          {{{entrar}}}
+        </div>
+      </div>
+    </div><br>
+    {{{form}}}
+  </div>
+</div>
+<div class="footer" style="height:100px"></div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+<script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js "></script>
+<script src="/javascripts/main/main.js"></script>
+<script src="/javascripts/main/forms.js"></script>

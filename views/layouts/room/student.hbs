@@ -1,0 +1,32 @@
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-9">
+            <div class="bg-light text-center rounded p-2 contenedor" style="min-height: 500px;">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div id="video-share" style="display: block; box-sizing: border-box; width:100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-xl-3">
+        <div class="bg-light text-center rounded p-2 mb-4 contenedor">
+                <div class="row">
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-warning w-40" id="btn-sound" title="Activar el microfono" onclick="audioMic()" type="button"><i id="icon-sound" class="fas fa-volume-mute me-2"></i>Sonido</button>    
+                        <button class="btn btn-info w-40" title="Abrir una pestaña de vista previa para el compartir pantalla"><a id="redirect" target="_new" class="text-decoration-none text-dark"><i class="fas fa-desktop me-2"></i>Compartir</a></button>                                            
+                        <button class="btn btn-danger w-20"><a href="/" class="text-decoration-none text-dark"><i class="fas fa-ban me-2"></i>Salir</a></button>        
+                    </div>
+                </div>
+            </div>
+            <div class="bg-light text-center rounded p-2 contenedor">   
+                <div class="d-flex align-items-center justify-content-between">
+                    <div id="video-grid" style="display: block; box-sizing: border-box; width:100%"></div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js" integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>    
+<script src="/javascripts/room/student.js"></script>

@@ -1,0 +1,144 @@
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <div>
+          <img src="/images/UVM logo.png" style="max-height: 55px; max-width: 55px; border: 2px solid #88c426;" class="w-25 rounded-circle float-start" alt="Logo UVM"> 
+          <h1 class="text-dark" style="padding-left: 75px;">Configura la sala</h1>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-start text-dark">
+        <div class="card bg-light" style="border: 3px solid #860000;">
+          <div class="card-body row">
+            <div class="col">
+              <h3>Ingresa los datos del trabajo especial de grado:</h3>
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Título</span>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+              </div>
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Descripción</span>
+                <textarea class="form-control" aria-label="width textarea" id="descripcion" name="descripcion" required></textarea>
+              </div>
+              <h5>Datos del defensor</h5>
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Correo</span>
+                <input type="text" class="form-control form-control-sm" id="correo" name="correo" placeholder="Ingresa el correo institucional sin el@" required>                
+                <span class="input-group-text">@uvm.edu.ve</span>
+                <button id="search-correo" class="btn btn-outline-primary" type="submit">Buscar</button>
+              </div>
+              <div class="input-group mb-1 mt-1">
+                <input type="hidden" id="id" name="id">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Ingresa el nombre del defensor" required>
+                <span class="input-group-text">Apellido</span>
+                <input type="text" class="form-control form-control-sm" id="apellido" name="apellido" placeholder="Ingresa el apellido del defensor" required>
+              </div>
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Cedula</span>
+                <input type="text" class="form-control form-control-sm" id="cedula" name="cedula" placeholder="Ingresa la cedula sin puntos Ejm:28002611" required>                
+              </div>
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Carrera</span>                
+                <select class="form-select form-select-sm" id="carrera" name="carrera">
+                  <option value="1">Ing. Industrial</option>
+                  <option value="2">Ing. Computacion</option>                    
+                  <option value="3">Administración de empresas</option>
+                  <option value="4">Contaduría pública</option>
+                  <option value="5">Derecho</option>
+                </select>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                <input type="hidden" id="checked" name="checked" value="0">
+                <label class="form-check-label" for="remember"><h5>Segundo Defensor</h5></label>
+              </div>
+              <div id="esconder" class="mb-1 mt-1">
+                <div class="input-group mb-1 mt-1">
+                  <span class="input-group-text">Correo</span>
+                  <input type="text" class="form-control form-control-sm" id="correo1" name="correo1" placeholder="Ingresa el correo institucional sin el@">                
+                  <span class="input-group-text">@uvm.edu.ve</span>
+                  <button id="search-correo1" class="btn btn-outline-primary" type="submit">Buscar</button>
+                </div>
+                <div class="input-group mb-1 mt-1">
+                  <input type="hidden" id="id1" name="id1">
+                  <span class="input-group-text">Nombre</span>
+                  <input type="text" class="form-control form-control-sm" id="nombre1" name="nombre1" placeholder="Ingresa el nombre del defensor">
+                  <span class="input-group-text">Apellido</span>
+                  <input type="text" class="form-control form-control-sm" id="apellido1" name="apellido1" placeholder="Ingresa el apellido del defensor">
+                </div>
+                <div class="input-group mb-1 mt-1">
+                  <span class="input-group-text">Cedula</span>
+                  <input type="text" class="form-control form-control-sm" id="cedula1" name="cedula1" placeholder="Ingresa la cedula sin puntos Ejm:28002611">
+                </div>
+                <div class="input-group mb-1 mt-1">
+                  <span class="input-group-text">Carrera</span>                
+                  <select class="form-select form-select-sm" id="carrera1" name="carrera1">
+                    <option value="1">Ing. Industrial</option>
+                    <option value="2">Ing. Computacion</option>                    
+                    <option value="3">Administración de empresas</option>
+                    <option value="4">Contaduría pública</option>
+                    <option value="5">Derecho</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col" style="border-left: 3px solid #860000;">
+              <h4 class="text-center">Datos del jurado asignado</h4>
+              <h5>Tutor</h5>              
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Correo</span>
+                <input type="text" class="form-control form-control-sm" id="cjuez" name="cjuez" placeholder="Ingresa el correo institucional sin el@" required>                
+                <span class="input-group-text">@uvm.edu.ve</span>
+                <button id="search-juez" class="btn btn-outline-primary" type="submit">Buscar</button>
+              </div>
+              <div class="input-group mb-3 mt-1">
+                <input type="hidden" id="idjuez" name="idjuez">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" class="form-control form-control-sm" id="njuez" name="njuez" placeholder="Ingresa el nombre del defensor" required>
+                <span class="input-group-text">Apellido</span>
+                <input type="text" class="form-control form-control-sm" id="ajuez" name="ajuez" placeholder="Ingresa el apellido del defensor" required>
+              </div>
+              <h5>Presidente del Jurado</h5>
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Correo</span>
+                <input type="text" class="form-control form-control-sm" id="cjuez1" name="cjuez1" placeholder="Ingresa el correo institucional sin el@" required>                
+                <span class="input-group-text">@uvm.edu.ve</span>
+                <button id="search-juez1" class="btn btn-outline-primary" type="submit">Buscar</button>
+              </div>
+              <div class="input-group mb-3 mt-1">
+                <input type="hidden" id="idjuez1" name="idjuez1">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" class="form-control form-control-sm" id="njuez1" name="njuez1" placeholder="Ingresa el nombre del defensor" required>
+                <span class="input-group-text">Apellido</span>
+                <input type="text" class="form-control form-control-sm" id="ajuez1" name="ajuez1" placeholder="Ingresa el apellido del defensor" required>
+              </div>
+              <h5>Jurado Principal</h5>
+              <div class="input-group mb-1 mt-1">
+                <span class="input-group-text">Correo</span>
+                <input type="text" class="form-control form-control-sm" id="cjuez2" name="cjuez2" placeholder="Ingresa el correo institucional sin el@" required>                
+                <span class="input-group-text">@uvm.edu.ve</span>
+                <button id="search-juez2" class="btn btn-outline-primary" type="submit">Buscar</button>
+              </div>
+              <div class="input-group mb-3 mt-1">
+                <input type="hidden" id="idjuez2" name="idjuez2">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" class="form-control form-control-sm" id="njuez2" name="njuez2" placeholder="Ingresa el nombre del defensor" required>
+                <span class="input-group-text">Apellido</span>
+                <input type="text" class="form-control form-control-sm" id="ajuez2" name="ajuez2" placeholder="Ingresa el apellido del defensor" required>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer bg-light">
+        <button type="button" id="crear" class="btn btn-success">Crear</button>
+        <button type="button" id="cerrar" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

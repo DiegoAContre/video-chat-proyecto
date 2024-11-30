@@ -1,0 +1,65 @@
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-9 mb-4">
+            <div class="bg-light text-center rounded p-2 mb-4 contenedor" style="min-height: 500px;">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div id="video-share" style="display: block; box-sizing: border-box; width:100%"></div>
+                </div>
+            </div>
+            {{{chat}}}
+        </div>
+        <div class="col-sm-12 col-xl-3">
+            <div class="bg-light text-center rounded p-2 mb-4 contenedor">
+                <div class="row">
+                    <div class="btn-group mb-1" role="group">
+                        <button title="Abrir panel informativo de la defensa" type="button" class="btn btn-info text-dark w-20" data-bs-toggle="modal" data-bs-target="#PriModal"><i class="far fa-address-card me-2"></i></button>
+                        <button title="Activar el audio propio" class="btn btn-warning w-60" id="btn-sound" onclick="audioMic()" type="button"><i id="icon-sound" class="fas fa-volume-mute me-2"></i>Sonido</button>                        
+                        <button class="btn btn-danger w-20"><a href="/" class="text-decoration-none text-dark"><i class="fas fa-ban me-2"></i>Salir</a></button>        
+                    </div>
+                    <div class="btn-group" role="group">                        
+                        <button title="Abrir panel de modelo de discurso de apertura" type="button" class="btn btn-primary text-dark w-50" data-bs-toggle="modal" data-bs-target="#SegModal"><i class="fas fa-book-reader me-2"></i> Apertura</button>
+                        <button title="Abrir panel de modelo del veredicto final" type="button" class="btn btn-outline-dark w-50" data-bs-toggle="modal" data-bs-target="#TerModal"><i class="fas fa-graduation-cap me-2"></i> Veredicto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-light text-center rounded p-2 mb-4 contenedor" style="min-height: 250px;">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div id="video-grid" style="display: block; box-sizing: border-box; width:100%"></div>
+                </div>
+            </div>
+            <div class="bg-light text-dark rounded p-2 mb-4 contenedor">
+                <div class="row">
+                    <h5 class="text-center" title="Indicación" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Primero los visitantes deben solicitar usar el audio">Control de sonido invitados</h5>
+                    <div class="container">
+                        <ul class="list-group">
+                        </ul>
+                    </div>
+                     <div class="d-grid mt-2">
+                        <button title="Silencia a todos los invitados" type="button" class="text-dark btn btn-danger btn-block" onclick="muteALL()">Silenciar Todos</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="bg-light text-dark rounded p-2 mb-4 contenedor">
+                <div class="row">
+                    <h5 class="text-center" title="Indicación" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Para poder grabar la defensa es necesario que el defensor active el compartir material">Grabar material</h5>
+                    <div class="btn-group" role="group">                        
+                        <button title="Empezar a grabar la defensa" type="button" id="recorderStart" class="btn btn-primary text-dark">Empezar</button>                        
+                        <button title="Pausar la grabación" type="button" id="recorderPause" style="display: none;" class="btn btn-outline-warning w-50">Pausar</button>
+                        <button title="Finalizar y descargar la grabación" type="button" id="recorderStop" style="display: none;" class="btn btn-outline-danger w-50">Detener</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+{{{modal}}}
+
+<script src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js" integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>    
+<script src="/javascripts/room/judge.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js "></script>
+<script src="/javascripts/utils/recorder.js"></script>
+<script src="/javascripts/utils/audio.js"></script>
+<script src="/javascripts/utils/modal.js"></script>

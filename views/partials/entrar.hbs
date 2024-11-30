@@ -1,0 +1,24 @@
+<form id="entrar">
+    <div class="row">
+        <div class="col form-floating mb-2 mt-2 text-dark">
+            <input type="text" class="form-control" id="codigo" list="browsers" name="codigo" placeholder="Ingresa tu correo o código" autocomplete="off" required>
+            <label class="text-start form-control-lg"><pre>Código de la sala</pre></label>
+            <datalist id="browsers">                                
+            </datalist>
+        </div>                
+        <div class="col form-floating mb-2 mt-2 text-dark">
+            <select class="form-select" id="opcion" name="opcion">
+                <option value="0">Selecciona</option>
+                <option value="1">Estudiante</option>
+                <option value="2">Jurado</option>
+                <option value="3">Invitado</option>
+            </select>
+            <label for="opcion" class="form-label form-control-lg"><pre> Tipo de usuario:</pre></label>
+        </div>
+    </div>
+    <div id="usur" class="input-group input-group-lg mb-2 mt-2 text-dark">
+        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingresa tu correo o codigo" autocomplete="off">
+        <span class="input-group-text">@uvm.edu.ve</span>            
+    </div>      
+    <button style="background-color: #1d555b;" class="mb-2 mt-2 boton btn btn-lg text-white">Entrar</button>
+</form>        
